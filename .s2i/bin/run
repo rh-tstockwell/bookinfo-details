@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ruby details.rb 8080
