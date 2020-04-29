@@ -1,0 +1,51 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: "2020-04-29T11:45:36Z"
+  labels:
+    app: details
+    app.kubernetes.io/component: details
+    app.kubernetes.io/instance: details
+  name: details
+  namespace: bookinfo
+  resourceVersion: "404726678"
+  selfLink: /apis/build.openshift.io/v1/namespaces/bookinfo/buildconfigs/details
+  uid: f0fd0416-8a0e-11ea-a6ee-0a580a820124
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: details:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: migrating-apps-v3/1.0
+      uri: https://github.com/rh-tstockwell/bookinfo-details.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: ruby:2.5
+        namespace: openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - github:
+      secret: rztR3D1_hUu9VUYpptSN
+    type: GitHub
+  - generic:
+      secret: PXx7TG49N3bKzlSigyWg
+    type: Generic
+  - type: ConfigChange
+  - imageChange:
+      lastTriggeredImageID: image-registry.openshift-image-registry.svc:5000/openshift/ruby@sha256:2818455a78220c649c26761a710b940f71f4b722035c04e142ba7e965ddd6e2a
+    type: ImageChange
+status:
+  lastVersion: 1

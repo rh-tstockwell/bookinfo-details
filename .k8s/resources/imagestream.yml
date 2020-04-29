@@ -1,0 +1,29 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: "2020-04-29T11:45:36Z"
+  generation: 1
+  labels:
+    app: details
+    app.kubernetes.io/component: details
+    app.kubernetes.io/instance: details
+  name: details
+  namespace: bookinfo
+  resourceVersion: "404729363"
+  selfLink: /apis/image.openshift.io/v1/namespaces/bookinfo/imagestreams/details
+  uid: f0d5f7ce-8a0e-11ea-a6ee-0a580a820124
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/bookinfo/details
+  publicDockerImageRepository: default-route-openshift-image-registry.apps.cluster.example.com/bookinfo/details
+  tags:
+  - items:
+    - created: "2020-04-29T11:47:50Z"
+      dockerImageReference: image-registry.openshift-image-registry.svc:5000/bookinfo/details@sha256:ceb070c453a583215bd91a613bc776f9bb805a8b4849347ae43e90438a624bef
+      generation: 1
+      image: sha256:ceb070c453a583215bd91a613bc776f9bb805a8b4849347ae43e90438a624bef
+    tag: latest
