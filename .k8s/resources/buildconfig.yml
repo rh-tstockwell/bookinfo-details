@@ -1,18 +1,12 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  annotations:
-    openshift.io/generated-by: OpenShiftNewApp
-  creationTimestamp: "2020-04-29T11:45:36Z"
+  annotations: {}
   labels:
     app: details
     app.kubernetes.io/component: details
     app.kubernetes.io/instance: details
   name: details
-  namespace: bookinfo
-  resourceVersion: "404726678"
-  selfLink: /apis/build.openshift.io/v1/namespaces/bookinfo/buildconfigs/details
-  uid: f0fd0416-8a0e-11ea-a6ee-0a580a820124
 spec:
   failedBuildsHistoryLimit: 5
   nodeSelector: null
@@ -44,8 +38,5 @@ spec:
       secret: PXx7TG49N3bKzlSigyWg
     type: Generic
   - type: ConfigChange
-  - imageChange:
-      lastTriggeredImageID: image-registry.openshift-image-registry.svc:5000/openshift/ruby@sha256:2818455a78220c649c26761a710b940f71f4b722035c04e142ba7e965ddd6e2a
+  - imageChange: {}
     type: ImageChange
-status:
-  lastVersion: 1

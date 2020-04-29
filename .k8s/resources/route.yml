@@ -3,18 +3,12 @@ kind: Route
 metadata:
   annotations:
     openshift.io/host.generated: "true"
-  creationTimestamp: "2020-04-29T13:57:19Z"
   labels:
     app: details
     app.kubernetes.io/component: details
     app.kubernetes.io/instance: details
   name: details
-  namespace: bookinfo
-  resourceVersion: "404880532"
-  selfLink: /apis/route.openshift.io/v1/namespaces/bookinfo/routes/details
-  uid: 57c37958-8a21-11ea-b451-0a580a80011a
 spec:
-  host: details-bookinfo.apps.cluster.example.com
   port:
     targetPort: 8080-tcp
   subdomain: ""
@@ -23,13 +17,3 @@ spec:
     name: details
     weight: 100
   wildcardPolicy: None
-status:
-  ingress:
-  - conditions:
-    - lastTransitionTime: "2020-04-29T13:57:19Z"
-      status: "True"
-      type: Admitted
-    host: details-bookinfo.apps.cluster.example.com
-    routerCanonicalHostname: apps.cluster.example.com
-    routerName: default
-    wildcardPolicy: None

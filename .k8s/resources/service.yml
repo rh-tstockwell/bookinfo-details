@@ -1,20 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    openshift.io/generated-by: OpenShiftNewApp
-  creationTimestamp: "2020-04-29T11:45:37Z"
+  annotations: {}
   labels:
     app: details
     app.kubernetes.io/component: details
     app.kubernetes.io/instance: details
   name: details
-  namespace: bookinfo
-  resourceVersion: "404726708"
-  selfLink: /api/v1/namespaces/bookinfo/services/details
-  uid: f149586b-8a0e-11ea-9089-0a16ab677b4c
 spec:
-  clusterIP: 127.0.0.1
   ports:
   - name: 8080-tcp
     port: 8080
@@ -24,5 +17,3 @@ spec:
     deploymentconfig: details
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
